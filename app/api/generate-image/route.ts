@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
     const image = (await hf.textToImage({
       model: "black-forest-labs/FLUX.1-schnell",
-      inputs: prompt,
+      inputs: `${prompt} and always black-and-white old styled`,
     })) as unknown as Blob;
 
     const buffer = await image.arrayBuffer();

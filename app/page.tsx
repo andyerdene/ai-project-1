@@ -60,7 +60,11 @@ export default function Home() {
 
       {image && (
         <div className="mt-8 w-full max-w-2xl">
-          <img src={image} alt="Generated" className="w-full rounded-lg shadow-lg" />
+          <img
+            src={image}
+            alt="Generated"
+            className="w-full rounded-lg shadow-lg"
+          />
         </div>
       )}
     </div>
