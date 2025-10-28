@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChatInterface } from "./_components/ChatInterface";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
@@ -37,7 +38,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 relative">
       <h1 className="text-4xl font-bold mb-8">Text to Image Generator</h1>
 
       <form onSubmit={generateImage} className="w-full max-w-2xl">
@@ -67,6 +68,7 @@ export default function Home() {
           />
         </div>
       )}
+      <ChatInterface />
     </div>
   );
 }
